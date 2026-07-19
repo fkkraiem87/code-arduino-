@@ -1,0 +1,15 @@
+int ledPin = 8; // LED connected to pin 8
+
+void setup() {
+  pinMode(ledPin, OUTPUT); // LED pin is an OUTPUT 
+}
+
+void loop() {
+  digitalWrite(ledPin, HIGH); // turn LED ON
+  delay(1000); // wait 1 second
+
+  digitalWrite(ledPin, LOW); // turn LED OFF
+  delay(1000); // wait 1 second
+}
+
+// this a very simple code of led you can use it for many projects 
