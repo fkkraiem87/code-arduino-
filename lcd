@@ -1,0 +1,24 @@
+# this code is used for lcd I2C only 
+
+#include <Wire.h> // library for I2C communication
+#include <LiquidCrystal_I2C.h>  // library for I2C LCD
+
+LiquidCrystal_I2C lcd(0x27, 16, 2); // LCD adress, columns, rows
+
+
+void setup() {
+  lcd.init();
+  lcd.backlight();
+
+  lcd.setCursor(0, 0);
+  lcd.print("hello world");
+
+  lcd.setCursor(0, 1);
+  lcd.print("LCD test");
+  }
+
+void loop() {
+
+  }
+
+# this code is used sometimes for many projects
