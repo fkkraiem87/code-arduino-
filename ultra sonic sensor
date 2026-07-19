@@ -1,0 +1,35 @@
+int echoPin = 10; // pin used to receive the signal
+int trigPin = 11; // pin used to send the signal
+
+float distance; // store the distance value
+long duration; // store the time of the echo
+
+void setup() {
+  pinMode(trigPin, OUTPUT); // trig pin sends signal, so it is OUTPUT
+   pinMode(echoPin, INPUT); // echo pin receives signal, so it is INPUT
+
+  Serial.begin(9600); // start serial communication
+}
+
+void loop() {
+
+  digitalWrite(trigPin, LOW); // turn off the trigger
+  delayMicroseconds(2); // wait 2 microseconds
+
+  digitalWrite(trigPin, HIGH); // send ultrasonic wave
+  delayMicroseconds(10); // keep the wave for 10 microseconds
+
+  digitalWrite(trigPin, LOW); // stop sending wave
+
+  duration = pulseIn(echoPin, HIGH); // calculate the time of the returning wave
+
+  distance = duration * 0.034 / 2; // calculate distance in cm
+
+  Serial.print("Distance: "); // print text
+  Serial.print(distance); // print distance value
+  Serial.println(" cm"); // print unit
+
+  delay(500); // wait before repeating
+}
+
+// this code is using for all the projects , in many projects like lcd and led and traffic light you will not need to print the distanec in arduino IDE so you can remove its party and use the code for what you need 
