@@ -1,0 +1,28 @@
+# Arduino Traffic Light System 🚦
+
+## Description
+This project simulates a traffic light using Arduino and 3 LEDs.
+The LEDs turn on like a real traffic light.
+
+## Components
+- Arduino UNO
+- Red LED
+- Yellow LED
+- Green LED
+- 3 × 220Ω resistors
+- Breadboard
+- Jumper wires
+
+## Circuit
+Red LED → Pin 13  
+Yellow LED → Pin 12  
+Green LED → Pin 11  
+
+## How it works
+1. Red LED turns ON for 3 seconds.
+2. Yellow LED turns ON for 1 second.
+3. Green LED turns ON for 3 seconds.
+4. The process repeats.
+
+## Code
+The Arduino code is available in:
